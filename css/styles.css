@@ -25,11 +25,22 @@ body {
 .about-us,
 .header-section,
 .services-section,
-.what-we-do {
+.what-we-do,
+.portfolio {
   display: block;
   text-align: center;
-  padding: 1em;
+  padding: 1em 0;
 }
 .services-section {
   background-image: url(../assets/backgrounds/s_image.jpg);
+}
+.product,
+.development,
+.design {
+  padding: 1em;
+}
+#product-description,
+#development-description,
+#design-description {
+  display: none;
 }

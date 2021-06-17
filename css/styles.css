@@ -1,0 +1,27 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background: #fff;
+}
+.header-section {
+  background-image: url(../assets/backgrounds/h_img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.header-section img {
+  padding-top: 8em;
+}
+.header-section p {
+  font-size: 0.51em;
+}
+.site-logo {
+  padding-bottom: 1em;
+}
+.about-us,
+.header-section {
+  display: block;
+  text-align: center;
+  padding: 1em;
+}

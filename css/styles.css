@@ -44,3 +44,15 @@ body {
 #design-description {
   display: none;
 }
+.portfolio img {
+  width: 100%;
+  padding-bottom: 1em;
+}
+.portfolio .row {
+  padding: 1em;
+}
+@media screen and (min-width: 768px) {
+  .portfolio img {
+    padding-bottom: 0;
+  }
+}

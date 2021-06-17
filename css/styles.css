@@ -5,6 +5,9 @@ body {
 }
 .header-section {
   background-image: url(../assets/backgrounds/h_img.jpg);
+}
+.header-section,
+.services-section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,14 +17,19 @@ body {
   padding-top: 8em;
 }
 .header-section p {
-  font-size: 0.51em;
+  font-size: 0.75em;
 }
 .site-logo {
   padding-bottom: 1em;
 }
 .about-us,
-.header-section {
+.header-section,
+.services-section,
+.what-we-do {
   display: block;
   text-align: center;
   padding: 1em;
+}
+.services-section {
+  background-image: url(../assets/backgrounds/s_image.jpg);
 }

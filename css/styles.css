@@ -7,7 +7,8 @@ body {
   background-image: url(../assets/backgrounds/h_img.jpg);
 }
 .header-section,
-.services-section {
+.services-section,
+.contact-us {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,7 +27,8 @@ body {
 .header-section,
 .services-section,
 .what-we-do,
-.portfolio {
+.portfolio,
+.contact-us {
   display: block;
   text-align: center;
   padding: 1em 0;
@@ -50,6 +52,23 @@ body {
 }
 .portfolio .row {
   padding: 1em;
+}
+.contact-us{
+    background-image: url(../assets/backgrounds/c_image.jpg);
+    padding: 3em;
+}
+.contact-form-wrapper {
+    display: inherit;
+    margin: 1em;
+}
+.contact-form-wrapper form input,
+.contact-form-wrapper form textarea{
+    background: transparent;
+    border: 1px solid #fff;
+}
+.contact-form-wrapper form input::placeholder,
+.contact-form-wrapper form textarea::placeholder{
+    color: #fff;
 }
 @media screen and (min-width: 768px) {
   .portfolio img {

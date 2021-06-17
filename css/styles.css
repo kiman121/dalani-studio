@@ -28,7 +28,8 @@ body {
 .services-section,
 .what-we-do,
 .portfolio,
-.contact-us {
+.contact-us,
+.social-media {
   display: block;
   text-align: center;
   padding: 1em 0;
@@ -69,6 +70,15 @@ body {
 .contact-form-wrapper form input::placeholder,
 .contact-form-wrapper form textarea::placeholder{
     color: #fff;
+}
+.social-media p{
+    line-height: 0.25;
+}
+.social-media-icons{
+    padding: 2em;
+}
+.social-media-icons span{
+    padding: 0.125em;
 }
 @media screen and (min-width: 768px) {
   .portfolio img {

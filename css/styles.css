@@ -47,8 +47,8 @@ body {
 #design-description {
   display: none;
 }
-.what-we-do-content img{
-    padding-bottom: 0.5em;
+.what-we-do-content img {
+  padding-bottom: 0.5em;
 }
 .portfolio img {
   width: 100%;
@@ -57,60 +57,63 @@ body {
 .portfolio .row {
   padding: 1em;
 }
-.contact-us{
-    background-image: url(../assets/backgrounds/c_image.jpg);
-    padding: 3em;
+.contact-us {
+  background-image: url(../assets/backgrounds/c_image.jpg);
+  padding: 3em;
 }
 .contact-form-wrapper {
-    display: inherit;
-    margin: 1em;
+  display: inherit;
+  margin: 1em;
 }
 
 .contact-form-wrapper form input,
-.contact-form-wrapper form textarea{
-    background: none;
-    border: 1px solid #fff;
+.contact-form-wrapper form textarea {
+  background: none;
+  border: 1px solid #fff;
 }
 .contact-form-wrapper form input::placeholder,
-.contact-form-wrapper form textarea::placeholder{
-    color: #fff;
+.contact-form-wrapper form textarea::placeholder {
+  color: #fff;
 }
 /* .contact-form-wrapper form textarea:not(:empty){
     background-color: rgb(232, 240, 254) !important;
 } */
-.social-media p{
-    line-height: 0.25;
+.social-media p {
+  line-height: 0.25;
 }
-.social-media-icons{
-    padding: 2em;
+.social-media-icons {
+  padding: 2em;
 }
-.social-media-icons span{
-    padding: 0.125em;
+.social-media-icons span {
+  padding: 0.125em;
 }
-.btn-submit{
-    float: right;
-    background-color: #fff;
-    color: #000;
-    width: 20%;
+.btn-submit {
+  float: right;
+  background-color: #fff;
+  color: #000;
+  width: 20%;
 }
-.validate{
-    border-color: red !important;
-    
+.validate {
+  border-color: red !important;
 }
 .contact-form-wrapper form input.validate,
-.contact-form-wrapper form textarea.validate{
-    background-color: rgb(232, 240, 254) !important;
+.contact-form-wrapper form textarea.validate {
+  background-color: rgb(232, 240, 254) !important;
 }
 
 .contact-form-wrapper form input.validate::placeholder,
-.contact-form-wrapper form textarea.validate::placeholder{
-    color: #000;
+.contact-form-wrapper form textarea.validate::placeholder {
+  color: #000;
 }
-.hide-alert{
-    display: none;
+.hide-alert {
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .portfolio img {
     padding-bottom: 0;
+  }
+  .contact-form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
   }
 }

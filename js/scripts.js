@@ -19,19 +19,24 @@ $(document).ready(function () {
 
     var inputFields = ["name", "email", "message"];
     var formData = validateUserInput(inputFields, "form-alerts");
-    if (!$.isEmptyObject(formData)) {
+    if (formData.validated) {
       var message =
         formData.name +
         ", we have received your message. Thank you for reaching out to us.";
       modalAlerts("modalSuccess", message);
+      resetFieldValues(inputFields);
     }
   });
 });
 
 function validateUserInput(formInputFields, alertDivClass) {
   var formData = {},
-    error = false;
+    validated = true;
   $(".validate").removeClass("validate");
+  $("." + alertDivClass).empty();
+  $("." + alertDivClass)
+    .removeClass("alert-danger")
+    .addClass("hide-alert");
 
   formInputFields.forEach(function (formInputField) {
     var field = formInputField;
@@ -39,24 +44,28 @@ function validateUserInput(formInputFields, alertDivClass) {
     var value = $("#" + field).val();
 
     if (value === "") {
-      error = true;
+      validated = false;
+
       thisField.addClass("validate");
+
+      $("." + alertDivClass).html("Fill the missing fields!");
+
       $("." + alertDivClass)
-        .empty()
-        .html("Fill the missing fields!");
+        .removeClass("hide-alert")
+        .addClass("alert-danger");
+
+      setTimeout(() => {
+        $("." + alertDivClass).empty();
+        $("." + alertDivClass)
+          .removeClass("alert-danger")
+          .addClass("hide-alert");
+      }, 2000);
     } else {
       formData[field] = value;
     }
   });
-  if (error) {
-    $("." + alertDivClass)
-      .removeClass("hide-alert")
-      .addClass("alert-danger");
-  } else {
-    $("." + alertDivClass)
-      .removeClass("alert-danger")
-      .addClass("hide-alert");
-  }
+
+  formData["validated"] = validated;
 
   return formData;
 }
@@ -64,10 +73,16 @@ function modalAlerts(modalId, alertMessage) {
   $("#" + modalId + " .modal-body")
     .empty()
     .html(alertMessage);
-  
-    $("#" + modalId).modal("show");
-  
+
+  $("#" + modalId).modal("show");
+
   setTimeout(() => {
     $("#" + modalId).modal("hide");
   }, 4000);
+}
+
+function resetFieldValues(formInputFields) {
+  formInputFields.forEach(function (formInputField) {
+    $("#" + formInputField).val("");
+  });
 }

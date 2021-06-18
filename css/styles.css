@@ -47,6 +47,9 @@ body {
 #design-description {
   display: none;
 }
+.what-we-do-content img{
+    padding-bottom: 0.5em;
+}
 .portfolio img {
   width: 100%;
   padding-bottom: 1em;

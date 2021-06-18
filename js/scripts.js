@@ -3,24 +3,28 @@ $(document).ready(function () {
     $("#design-icon").toggle();
     $("#design-description").toggle();
   });
+
   $(".development-click").click(function () {
     $("#development-icon").toggle();
     $("#development-description").toggle();
   });
+
   $(".product-click").click(function () {
     $("#product-icon").toggle();
     $("#product-description").toggle();
   });
+
   $("form#contact-us-form").submit(function (event) {
     event.preventDefault();
 
     var inputFields = ["name", "email", "message"];
     var formData = validateUserInput(inputFields, "form-alerts");
-    if ($.isEmptyObject(formData)) {
-      console.log(formData);
+    if (!$.isEmptyObject(formData)) {
+      var message =
+        formData.name +
+        ", we have received your message. Thank you for reaching out to us.";
+      modalAlerts("modalSuccess", message);
     }
-
-    // console.log(inputFields);
   });
 });
 
@@ -44,11 +48,26 @@ function validateUserInput(formInputFields, alertDivClass) {
       formData[field] = value;
     }
   });
-  error
-    ? $("." + alertDivClass)
-        .removeClass("hide-alert")
-        .addClass("alert-danger")
-    : $("." + alertDivClass).removeClass("alert-danger").addClass("hide-alert");
+  if (error) {
+    $("." + alertDivClass)
+      .removeClass("hide-alert")
+      .addClass("alert-danger");
+  } else {
+    $("." + alertDivClass)
+      .removeClass("alert-danger")
+      .addClass("hide-alert");
+  }
 
   return formData;
+}
+function modalAlerts(modalId, alertMessage) {
+  $("#" + modalId + " .modal-body")
+    .empty()
+    .html(alertMessage);
+  
+    $("#" + modalId).modal("show");
+  
+  setTimeout(() => {
+    $("#" + modalId).modal("hide");
+  }, 4000);
 }

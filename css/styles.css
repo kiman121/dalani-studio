@@ -106,7 +106,6 @@ body {
 .contact-form-wrapper form textarea.validate::placeholder{
     color: #000;
 }
-
 .hide-alert{
     display: none;
 }

@@ -14,6 +14,21 @@ $(document).ready(function () {
     $("#product-description").toggle();
   });
 
+  $(".project-tile").hover(
+    function () {
+      var projectDescription = $(this).data("description");
+      console.log(projectDescription);
+      $(this)
+        .find(".project-image-overlay")
+        .empty()
+        .html('<div class="text">' + projectDescription + "</div>");
+      $(this).find(".project-image-overlay").show();
+    },
+    function () {
+      $(".project-image-overlay").hide();
+    }
+  );
+
   $("form#contact-us-form").submit(function (event) {
     event.preventDefault();
 

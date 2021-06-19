@@ -50,12 +50,15 @@ body {
 .what-we-do-content img {
   padding-bottom: 0.5em;
 }
+
 .portfolio img {
   width: 100%;
-  padding-bottom: 1em;
+  height: auto;
+  /* padding-bottom: 1em; */
 }
+
 .portfolio .row {
-  padding: 1em;
+  /* padding: 1em; */
 }
 .contact-us {
   background-image: url(../assets/backgrounds/c_image.jpg);
@@ -65,7 +68,6 @@ body {
   display: inherit;
   margin: 1em;
 }
-
 .contact-form-wrapper form input,
 .contact-form-wrapper form textarea {
   background: none;
@@ -75,9 +77,6 @@ body {
 .contact-form-wrapper form textarea::placeholder {
   color: #fff;
 }
-/* .contact-form-wrapper form textarea:not(:empty){
-    background-color: rgb(232, 240, 254) !important;
-} */
 .social-media p {
   line-height: 0.25;
 }
@@ -100,13 +99,39 @@ body {
 .contact-form-wrapper form textarea.validate {
   background-color: rgb(232, 240, 254) !important;
 }
-
 .contact-form-wrapper form input.validate::placeholder,
 .contact-form-wrapper form textarea.validate::placeholder {
   color: #000;
 }
 .hide-alert {
   display: none;
+}
+.portfolio a {
+  display: block;
+  position: relative;
+  margin: 0.3em;
+}
+.project-tile {
+  padding: 0;
+  margin: 0;
+}
+.project-image-overlay {
+  display: block;
+  transition: 0.5s ease;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+.project-image-overlay .text {
+  color: #fff;
+  padding-top: 30%;
 }
 @media screen and (min-width: 768px) {
   .portfolio img {

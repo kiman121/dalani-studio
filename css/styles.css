@@ -3,6 +3,10 @@ body {
   font-size: 16px;
   background: #fff;
 }
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
 .header-section {
   background-image: url(../assets/backgrounds/h_img.jpg);
 }
@@ -33,6 +37,7 @@ body {
   display: block;
   text-align: center;
   padding: 1em 0;
+  margin: 0;
 }
 .services-section {
   background-image: url(../assets/backgrounds/s_image.jpg);
@@ -50,15 +55,15 @@ body {
 .what-we-do-content img {
   padding-bottom: 0.5em;
 }
-
+.about-us-wrapper,
+  .portfolio-wrapper,
+  .what-we-do-wrapper,
+  .services-section-wrapper{
+      padding: 1em;
+  }
 .portfolio img {
   width: 100%;
   height: auto;
-  /* padding-bottom: 1em; */
-}
-
-.portfolio .row {
-  /* padding: 1em; */
 }
 .contact-us {
   background-image: url(../assets/backgrounds/c_image.jpg);
@@ -140,5 +145,12 @@ body {
   .contact-form-wrapper {
     max-width: 800px;
     margin: 0 auto;
+  }
+  .about-us-wrapper,
+  .portfolio-wrapper,
+  .what-we-do-wrapper,
+  .services-section-wrapper{
+      max-width: 980px;
+      margin: 0 auto;
   }
 }

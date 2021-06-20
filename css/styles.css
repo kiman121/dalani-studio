@@ -1,11 +1,14 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:"Roboto", Helvetica, Arial, sans-serif;
   font-size: 16px;
   background: #fff;
 }
-.container-fluid{
-    margin: 0;
-    padding: 0;
+h3{
+    font-weight: 900;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 .header-section {
   background-image: url(../assets/backgrounds/h_img.jpg);
@@ -55,12 +58,18 @@ body {
 .what-we-do-content img {
   padding-bottom: 0.5em;
 }
+.what-we-do-wrapper h4, h6{
+    font-style: bold;
+    font-weight: 900;
+    font-size: 1em;
+}
+
 .about-us-wrapper,
-  .portfolio-wrapper,
-  .what-we-do-wrapper,
-  .services-section-wrapper{
-      padding: 1em;
-  }
+.portfolio-wrapper,
+.what-we-do-wrapper,
+.services-section-wrapper {
+  padding: 1em;
+}
 .portfolio img {
   width: 100%;
   height: auto;
@@ -149,8 +158,8 @@ body {
   .about-us-wrapper,
   .portfolio-wrapper,
   .what-we-do-wrapper,
-  .services-section-wrapper{
-      max-width: 980px;
-      margin: 0 auto;
+  .services-section-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
   }
 }

@@ -1,4 +1,4 @@
-# Akan Names Web Application
+# Delani Studio Web Application
 
 #### Delani Studio's landing page, 2021
 
